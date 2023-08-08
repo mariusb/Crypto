@@ -463,3 +463,18 @@ Mon Aug  7 09:00:00 SAST 2023
     "ZAR": 18.501683
   }
 }
+=======================================================================================
+Tue Aug  8 09:00:00 SAST 2023
+{"BTC":{"USD":29192.8},"ETH":{"USD":1831.36},"LTC":{"USD":82.59},"DASH":{"USD":32.65},"DOGE":{"USD":0.07359},"BTG":{"USD":15.46},"SC":{"USD":0.00347},"BCH":{"USD":235.55},"OMG":{"USD":0.5534},"CVC":{"USD":0.0842},"DCR":{"USD":14.35},"XVG":{"USD":0.004078},"XMR":{"USD":158.41},"ADA":{"USD":0.292},"USDT":{"USD":0.9988},"USDC":{"USD":0.9998},"ROSE":{"USD":0.04612}}
+{"ADA":{"BTC":0.00001},"DOGE":{"BTC":0.00000252},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005423},"LTC":{"BTC":0.00283},"XLM":{"BTC":0.00000479},"BNB":{"BTC":0.008324},"DASH":{"BTC":0.001119},"ETH":{"BTC":0.06273},"USDT":{"BTC":0.00003422},"USDC":{"BTC":0.00003426},"ROSE":{"BTC":0.00000158},"LUNA":{"BTC":0.00001915},"LUNC":{"BTC":3e-9}}
+{"ZAR":560007}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1691478000,
+  "base": "USD",
+  "rates": {
+    "THB": 34.99,
+    "ZAR": 18.823425
+  }
+}
