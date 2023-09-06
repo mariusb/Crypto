@@ -628,3 +628,288 @@ Fri Aug 18 09:00:00 SAST 2023
     "ZAR": 19.041044
   }
 }
+=======================================================================================
+Sat Aug 19 09:00:00 SAST 2023
+{"BTC":{"USD":25825.11},"ETH":{"USD":1654.17},"LTC":{"USD":63.76},"DASH":{"USD":26.41},"DOGE":{"USD":0.06331},"BTG":{"USD":13.3},"SC":{"USD":0.002869},"BCH":{"USD":186.8},"OMG":{"USD":0.4763},"CVC":{"USD":0.07081},"DCR":{"USD":12.91},"XVG":{"USD":0.003474},"XMR":{"USD":144.48},"ADA":{"USD":0.2613},"USDT":{"USD":0.9998},"USDC":{"USD":0.9998},"ROSE":{"USD":0.04104}}
+{"ADA":{"BTC":0.00001011},"DOGE":{"BTC":0.00000245},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005591},"LTC":{"BTC":0.002468},"XLM":{"BTC":0.00000456},"BNB":{"BTC":0.008326},"DASH":{"BTC":0.001022},"ETH":{"BTC":0.06405},"USDT":{"BTC":0.00003871},"USDC":{"BTC":0.00003873},"ROSE":{"BTC":0.00000159},"LUNA":{"BTC":0.0000167},"LUNC":{"BTC":2e-9}}
+{"ZAR":500501}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692424825,
+  "base": "USD",
+  "rates": {
+    "THB": 35.446489,
+    "ZAR": 19.06202
+  }
+}
+=======================================================================================
+Sun Aug 20 09:00:00 SAST 2023
+{"BTC":{"USD":26064.75},"ETH":{"USD":1663.07},"LTC":{"USD":64.15},"DASH":{"USD":26.68},"DOGE":{"USD":0.06405},"BTG":{"USD":13.38},"SC":{"USD":0.002879},"BCH":{"USD":187.23},"OMG":{"USD":0.4797},"CVC":{"USD":0.07143},"DCR":{"USD":13.02},"XVG":{"USD":0.003557},"XMR":{"USD":143.52},"ADA":{"USD":0.2659},"USDT":{"USD":0.9999},"USDC":{"USD":0.9999},"ROSE":{"USD":0.04151}}
+{"ADA":{"BTC":0.0000102},"DOGE":{"BTC":0.00000246},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005511},"LTC":{"BTC":0.002461},"XLM":{"BTC":0.00000479},"BNB":{"BTC":0.008272},"DASH":{"BTC":0.001024},"ETH":{"BTC":0.06381},"USDT":{"BTC":0.00003837},"USDC":{"BTC":0.00003837},"ROSE":{"BTC":0.00000159},"LUNA":{"BTC":0.00001697},"LUNC":{"BTC":3e-9}}
+{"ZAR":504873}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692511218,
+  "base": "USD",
+  "rates": {
+    "THB": 35.348881,
+    "ZAR": 19.06202
+  }
+}
+=======================================================================================
+Mon Aug 21 09:00:00 SAST 2023
+{"BTC":{"USD":26033.16},"ETH":{"USD":1670.85},"LTC":{"USD":65.89},"DASH":{"USD":26.68},"DOGE":{"USD":0.06319},"BTG":{"USD":13.27},"SC":{"USD":0.002874},"BCH":{"USD":187.51},"OMG":{"USD":0.4834},"CVC":{"USD":0.0717},"DCR":{"USD":13.07},"XVG":{"USD":0.003505},"XMR":{"USD":147.96},"ADA":{"USD":0.2678},"USDT":{"USD":0.9997},"USDC":{"USD":0.9997},"ROSE":{"USD":0.04092}}
+{"ADA":{"BTC":0.00001029},"DOGE":{"BTC":0.00000243},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005682},"LTC":{"BTC":0.002531},"XLM":{"BTC":0.00000481},"BNB":{"BTC":0.00827},"DASH":{"BTC":0.001025},"ETH":{"BTC":0.06419},"USDT":{"BTC":0.00003841},"USDC":{"BTC":0.00003842},"ROSE":{"BTC":0.00000157},"LUNA":{"BTC":0.00001687},"LUNC":{"BTC":3e-9}}
+{"ZAR":503073}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692601200,
+  "base": "USD",
+  "rates": {
+    "THB": 35.28,
+    "ZAR": 19.041906
+  }
+}
+=======================================================================================
+Tue Aug 22 09:00:00 SAST 2023
+{"BTC":{"USD":26059.12},"ETH":{"USD":1664.42},"LTC":{"USD":66.18},"DASH":{"USD":26.52},"DOGE":{"USD":0.06307},"BTG":{"USD":13.25},"SC":{"USD":0.00281},"BCH":{"USD":185.38},"OMG":{"USD":0.4836},"CVC":{"USD":0.0707},"DCR":{"USD":12.9},"XVG":{"USD":0.003302},"XMR":{"USD":148.87},"ADA":{"USD":0.2614},"USDT":{"USD":0.9996},"USDC":{"USD":0.9996},"ROSE":{"USD":0.04023}}
+{"ADA":{"BTC":0.00001003},"DOGE":{"BTC":0.00000242},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005719},"LTC":{"BTC":0.00254},"XLM":{"BTC":0.00000477},"BNB":{"BTC":0.008021},"DASH":{"BTC":0.001016},"ETH":{"BTC":0.06387},"USDT":{"BTC":0.00003836},"USDC":{"BTC":0.00003837},"ROSE":{"BTC":0.00000154},"LUNA":{"BTC":0.00001652},"LUNC":{"BTC":3e-9}}
+{"ZAR":500129}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692687600,
+  "base": "USD",
+  "rates": {
+    "THB": 35.109016,
+    "ZAR": 18.871781
+  }
+}
+=======================================================================================
+Wed Aug 23 09:00:00 SAST 2023
+{"BTC":{"USD":26047.4},"ETH":{"USD":1644.09},"LTC":{"USD":65.08},"DASH":{"USD":26.73},"DOGE":{"USD":0.06291},"BTG":{"USD":13},"SC":{"USD":0.002843},"BCH":{"USD":187.83},"OMG":{"USD":0.481},"CVC":{"USD":0.07114},"DCR":{"USD":12.77},"XVG":{"USD":0.003285},"XMR":{"USD":145.64},"ADA":{"USD":0.2603},"USDT":{"USD":0.9996},"USDC":{"USD":0.9996},"ROSE":{"USD":0.04039}}
+{"ADA":{"BTC":0.00000998},"DOGE":{"BTC":0.00000242},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.00559},"LTC":{"BTC":0.002499},"XLM":{"BTC":0.00000462},"BNB":{"BTC":0.008243},"DASH":{"BTC":0.001026},"ETH":{"BTC":0.06313},"USDT":{"BTC":0.00003837},"USDC":{"BTC":0.00003839},"ROSE":{"BTC":0.00000155},"LUNA":{"BTC":0.00001637},"LUNC":{"BTC":2e-9}}
+{"ZAR":497088}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692774000,
+  "base": "USD",
+  "rates": {
+    "THB": 34.98,
+    "ZAR": 18.74992
+  }
+}
+=======================================================================================
+Thu Aug 24 09:00:00 SAST 2023
+{"BTC":{"USD":26446.62},"ETH":{"USD":1675.48},"LTC":{"USD":65.61},"DASH":{"USD":26.26},"DOGE":{"USD":0.0638},"BTG":{"USD":13.18},"SC":{"USD":0.002861},"BCH":{"USD":192.28},"OMG":{"USD":0.4857},"CVC":{"USD":0.0713},"DCR":{"USD":12.92},"XVG":{"USD":0.00351},"XMR":{"USD":138.1},"ADA":{"USD":0.269},"USDT":{"USD":0.9998},"USDC":{"USD":0.9998},"ROSE":{"USD":0.04137}}
+{"ADA":{"BTC":0.00001016},"DOGE":{"BTC":0.00000241},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005223},"LTC":{"BTC":0.002481},"XLM":{"BTC":0.0000048},"BNB":{"BTC":0.008285},"DASH":{"BTC":0.0009933},"ETH":{"BTC":0.06336},"USDT":{"BTC":0.00003781},"USDC":{"BTC":0.00003782},"ROSE":{"BTC":0.00000156},"LUNA":{"BTC":0.00001631},"LUNC":{"BTC":2e-9}}
+{"ZAR":499000}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692860400,
+  "base": "USD",
+  "rates": {
+    "THB": 34.91,
+    "ZAR": 18.533964
+  }
+}
+=======================================================================================
+Fri Aug 25 09:00:00 SAST 2023
+{"BTC":{"USD":26010.26},"ETH":{"USD":1650.48},"LTC":{"USD":64.41},"DASH":{"USD":24.96},"DOGE":{"USD":0.06222},"BTG":{"USD":13.04},"SC":{"USD":0.00286},"BCH":{"USD":190.14},"OMG":{"USD":0.4729},"CVC":{"USD":0.0698},"DCR":{"USD":12.79},"XVG":{"USD":0.00369},"XMR":{"USD":139.32},"ADA":{"USD":0.2614},"USDT":{"USD":0.9997},"USDC":{"USD":0.9997},"ROSE":{"USD":0.03962}}
+{"ADA":{"BTC":0.00001005},"DOGE":{"BTC":0.00000239},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005354},"LTC":{"BTC":0.002476},"XLM":{"BTC":0.00000466},"BNB":{"BTC":0.008279},"DASH":{"BTC":0.0009598},"ETH":{"BTC":0.06346},"USDT":{"BTC":0.00003844},"USDC":{"BTC":0.00003845},"ROSE":{"BTC":0.00000152},"LUNA":{"BTC":0.00001594},"LUNC":{"BTC":2e-9}}
+{"ZAR":499201}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1692946800,
+  "base": "USD",
+  "rates": {
+    "THB": 35.108144,
+    "ZAR": 18.821208
+  }
+}
+=======================================================================================
+Sat Aug 26 09:00:00 SAST 2023
+{"BTC":{"USD":26068.36},"ETH":{"USD":1652.84},"LTC":{"USD":65.32},"DASH":{"USD":25.46},"DOGE":{"USD":0.06332},"BTG":{"USD":13.01},"SC":{"USD":0.002913},"BCH":{"USD":190.2},"OMG":{"USD":0.4766},"CVC":{"USD":0.07218},"DCR":{"USD":13.36},"XVG":{"USD":0.003421},"XMR":{"USD":141.55},"ADA":{"USD":0.2604},"USDT":{"USD":0.9995},"USDC":{"USD":1},"ROSE":{"USD":0.04074}}
+{"ADA":{"BTC":0.00000998},"DOGE":{"BTC":0.00000243},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005434},"LTC":{"BTC":0.002505},"XLM":{"BTC":0.00000472},"BNB":{"BTC":0.008344},"DASH":{"BTC":0.0009766},"ETH":{"BTC":0.06341},"USDT":{"BTC":0.00003834},"USDC":{"BTC":0.00003837},"ROSE":{"BTC":0.00000156},"LUNA":{"BTC":0.00001596},"LUNC":{"BTC":2e-9}}
+{"ZAR":498445}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693029618,
+  "base": "USD",
+  "rates": {
+    "THB": 35.228466,
+    "ZAR": 18.623355
+  }
+}
+=======================================================================================
+Sun Aug 27 09:00:00 SAST 2023
+{"BTC":{"USD":26032.11},"ETH":{"USD":1649.31},"LTC":{"USD":65.03},"DASH":{"USD":25.47},"DOGE":{"USD":0.06311},"BTG":{"USD":12.8},"SC":{"USD":0.002957},"BCH":{"USD":191.22},"OMG":{"USD":0.4788},"CVC":{"USD":0.0723},"DCR":{"USD":14.44},"XVG":{"USD":0.003314},"XMR":{"USD":144.15},"ADA":{"USD":0.2619},"USDT":{"USD":0.9996},"USDC":{"USD":1.001},"ROSE":{"USD":0.04009}}
+{"ADA":{"BTC":0.00001006},"DOGE":{"BTC":0.00000242},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005537},"LTC":{"BTC":0.002497},"XLM":{"BTC":0.00000468},"BNB":{"BTC":0.00832},"DASH":{"BTC":0.0009783},"ETH":{"BTC":0.06335},"USDT":{"BTC":0.00003839},"USDC":{"BTC":0.00003841},"ROSE":{"BTC":0.00000154},"LUNA":{"BTC":0.0000159},"LUNC":{"BTC":2e-9}}
+{"ZAR":498977}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693116018,
+  "base": "USD",
+  "rates": {
+    "THB": 35.228466,
+    "ZAR": 18.623355
+  }
+}
+=======================================================================================
+Mon Aug 28 09:00:00 SAST 2023
+{"BTC":{"USD":25934.9},"ETH":{"USD":1642.04},"LTC":{"USD":64.53},"DASH":{"USD":25.67},"DOGE":{"USD":0.06251},"BTG":{"USD":13.26},"SC":{"USD":0.002827},"BCH":{"USD":192.92},"OMG":{"USD":0.4677},"CVC":{"USD":0.07041},"DCR":{"USD":13.18},"XVG":{"USD":0.003289},"XMR":{"USD":146.04},"ADA":{"USD":0.2602},"USDT":{"USD":0.9994},"USDC":{"USD":1},"ROSE":{"USD":0.03992}}
+{"ADA":{"BTC":0.00001003},"DOGE":{"BTC":0.00000241},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005629},"LTC":{"BTC":0.002489},"XLM":{"BTC":0.00000461},"BNB":{"BTC":0.008348},"DASH":{"BTC":0.0009901},"ETH":{"BTC":0.06332},"USDT":{"BTC":0.00003854},"USDC":{"BTC":0.00003857},"ROSE":{"BTC":0.00000154},"LUNA":{"BTC":0.00001573},"LUNC":{"BTC":2e-9}}
+{"ZAR":496704}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693206000,
+  "base": "USD",
+  "rates": {
+    "THB": 35.243,
+    "ZAR": 18.608838
+  }
+}
+=======================================================================================
+Tue Aug 29 09:00:01 SAST 2023
+{"BTC":{"USD":25996.3},"ETH":{"USD":1645.11},"LTC":{"USD":65.11},"DASH":{"USD":25.71},"DOGE":{"USD":0.06293},"BTG":{"USD":13.04},"SC":{"USD":0.002822},"BCH":{"USD":189.09},"OMG":{"USD":0.4748},"CVC":{"USD":0.06946},"DCR":{"USD":13.18},"XVG":{"USD":0.003411},"XMR":{"USD":143.95},"ADA":{"USD":0.2629},"USDT":{"USD":0.9995},"USDC":{"USD":1},"ROSE":{"USD":0.04014}}
+{"ADA":{"BTC":0.00001011},"DOGE":{"BTC":0.00000242},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.00554},"LTC":{"BTC":0.002505},"XLM":{"BTC":0.00000455},"BNB":{"BTC":0.00837},"DASH":{"BTC":0.0009889},"ETH":{"BTC":0.06329},"USDT":{"BTC":0.00003845},"USDC":{"BTC":0.00003848},"ROSE":{"BTC":0.00000154},"LUNA":{"BTC":0.00001573},"LUNC":{"BTC":2e-9}}
+{"ZAR":498064}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693292400,
+  "base": "USD",
+  "rates": {
+    "THB": 35.18,
+    "ZAR": 18.515403
+  }
+}
+=======================================================================================
+Wed Aug 30 09:00:00 SAST 2023
+{"BTC":{"USD":27385.59},"ETH":{"USD":1717.66},"LTC":{"USD":67.65},"DASH":{"USD":26.91},"DOGE":{"USD":0.06538},"BTG":{"USD":13.56},"SC":{"USD":0.0029},"BCH":{"USD":217.2},"OMG":{"USD":0.4998},"CVC":{"USD":0.07137},"DCR":{"USD":13.76},"XVG":{"USD":0.003657},"XMR":{"USD":147.71},"ADA":{"USD":0.2646},"USDT":{"USD":1},"USDC":{"USD":1},"ROSE":{"USD":0.04195}}
+{"ADA":{"BTC":0.00000966},"DOGE":{"BTC":0.00000239},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005396},"LTC":{"BTC":0.00247},"XLM":{"BTC":0.00000446},"BNB":{"BTC":0.008198},"DASH":{"BTC":0.000982},"ETH":{"BTC":0.06272},"USDT":{"BTC":0.00003652},"USDC":{"BTC":0.00003652},"ROSE":{"BTC":0.00000153},"LUNA":{"BTC":0.00001559},"LUNC":{"BTC":2e-9}}
+{"ZAR":523976}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693378800,
+  "base": "USD",
+  "rates": {
+    "THB": 35.1055,
+    "ZAR": 18.552162
+  }
+}
+=======================================================================================
+Thu Aug 31 09:00:00 SAST 2023
+{"BTC":{"USD":27254.47},"ETH":{"USD":1704.1},"LTC":{"USD":67.75},"DASH":{"USD":27.01},"DOGE":{"USD":0.06606},"BTG":{"USD":12.99},"SC":{"USD":0.002849},"BCH":{"USD":219.67},"OMG":{"USD":0.5039},"CVC":{"USD":0.0704},"DCR":{"USD":13.59},"XVG":{"USD":0.003638},"XMR":{"USD":143.9},"ADA":{"USD":0.2652},"USDT":{"USD":0.9999},"USDC":{"USD":0.9999},"ROSE":{"USD":0.0412}}
+{"ADA":{"BTC":0.00000973},"DOGE":{"BTC":0.00000242},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.00528},"LTC":{"BTC":0.002485},"XLM":{"BTC":0.00000442},"BNB":{"BTC":0.008205},"DASH":{"BTC":0.0009911},"ETH":{"BTC":0.06253},"USDT":{"BTC":0.00003669},"USDC":{"BTC":0.0000367},"ROSE":{"BTC":0.00000151},"LUNA":{"BTC":0.00001547},"LUNC":{"BTC":2e-9}}
+{"ZAR":522711}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693465200,
+  "base": "USD",
+  "rates": {
+    "THB": 34.9175,
+    "ZAR": 18.692058
+  }
+}
+=======================================================================================
+Fri Sep  1 09:00:00 SAST 2023
+{"BTC":{"USD":25992.15},"ETH":{"USD":1644.44},"LTC":{"USD":63.47},"DASH":{"USD":25.77},"DOGE":{"USD":0.06347},"BTG":{"USD":13.08},"SC":{"USD":0.002728},"BCH":{"USD":205.53},"OMG":{"USD":0.4731},"CVC":{"USD":0.0685},"DCR":{"USD":13.17},"XVG":{"USD":0.003463},"XMR":{"USD":142.22},"ADA":{"USD":0.2569},"USDT":{"USD":0.9999},"USDC":{"USD":0.9999},"ROSE":{"USD":0.03952}}
+{"ADA":{"BTC":0.00000988},"DOGE":{"BTC":0.00000244},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005475},"LTC":{"BTC":0.002441},"XLM":{"BTC":0.00000444},"BNB":{"BTC":0.008239},"DASH":{"BTC":0.0009913},"ETH":{"BTC":0.06327},"USDT":{"BTC":0.00003847},"USDC":{"BTC":0.00003848},"ROSE":{"BTC":0.00000152},"LUNA":{"BTC":0.00001556},"LUNC":{"BTC":2e-9}}
+{"ZAR":501128}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693551600,
+  "base": "USD",
+  "rates": {
+    "THB": 35.050834,
+    "ZAR": 18.82179
+  }
+}
+=======================================================================================
+Sat Sep  2 09:00:00 SAST 2023
+{"BTC":{"USD":25794.88},"ETH":{"USD":1630.13},"LTC":{"USD":63.23},"DASH":{"USD":25.09},"DOGE":{"USD":0.06345},"BTG":{"USD":12.67},"SC":{"USD":0.002708},"BCH":{"USD":198.67},"OMG":{"USD":0.467},"CVC":{"USD":0.06823},"DCR":{"USD":13.11},"XVG":{"USD":0.003483},"XMR":{"USD":140.74},"ADA":{"USD":0.2554},"USDT":{"USD":0.9997},"USDC":{"USD":0.9997},"ROSE":{"USD":0.03909}}
+{"ADA":{"BTC":0.0000099},"DOGE":{"BTC":0.00000246},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005459},"LTC":{"BTC":0.002452},"XLM":{"BTC":0.00000438},"BNB":{"BTC":0.008298},"DASH":{"BTC":0.0009732},"ETH":{"BTC":0.0632},"USDT":{"BTC":0.00003876},"USDC":{"BTC":0.00003877},"ROSE":{"BTC":0.00000152},"LUNA":{"BTC":0.00001533},"LUNC":{"BTC":2e-9}}
+{"ZAR":498268}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693634427,
+  "base": "USD",
+  "rates": {
+    "THB": 35.03311,
+    "ZAR": 18.8448
+  }
+}
+=======================================================================================
+Sun Sep  3 09:00:00 SAST 2023
+{"BTC":{"USD":25910.55},"ETH":{"USD":1636.16},"LTC":{"USD":64.5},"DASH":{"USD":25.63},"DOGE":{"USD":0.06374},"BTG":{"USD":12.67},"SC":{"USD":0.002878},"BCH":{"USD":196.08},"OMG":{"USD":0.4673},"CVC":{"USD":0.0693},"DCR":{"USD":13.28},"XVG":{"USD":0.00334},"XMR":{"USD":139.6},"ADA":{"USD":0.2565},"USDT":{"USD":0.9999},"USDC":{"USD":0.9999},"ROSE":{"USD":0.03978}}
+{"ADA":{"BTC":0.00000989},"DOGE":{"BTC":0.00000246},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.00539},"LTC":{"BTC":0.002489},"XLM":{"BTC":0.00000441},"BNB":{"BTC":0.008275},"DASH":{"BTC":0.000989},"ETH":{"BTC":0.06315},"USDT":{"BTC":0.00003859},"USDC":{"BTC":0.0000386},"ROSE":{"BTC":0.00000154},"LUNA":{"BTC":0.00001543},"LUNC":{"BTC":2e-9}}
+{"ZAR":499157}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693720827,
+  "base": "USD",
+  "rates": {
+    "THB": 35.036354,
+    "ZAR": 18.8448
+  }
+}
+=======================================================================================
+Mon Sep  4 09:00:00 SAST 2023
+{"BTC":{"USD":25962.18},"ETH":{"USD":1637.07},"LTC":{"USD":64.13},"DASH":{"USD":25.57},"DOGE":{"USD":0.06318},"BTG":{"USD":12.6},"SC":{"USD":0.002871},"BCH":{"USD":193.65},"OMG":{"USD":0.4571},"CVC":{"USD":0.06909},"DCR":{"USD":13.05},"XVG":{"USD":0.003213},"XMR":{"USD":143.33},"ADA":{"USD":0.2572},"USDT":{"USD":0.9997},"USDC":{"USD":0.9997},"ROSE":{"USD":0.04031}}
+{"ADA":{"BTC":0.00000991},"DOGE":{"BTC":0.00000243},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005517},"LTC":{"BTC":0.002471},"XLM":{"BTC":0.00000472},"BNB":{"BTC":0.008264},"DASH":{"BTC":0.0009851},"ETH":{"BTC":0.06306},"USDT":{"BTC":0.00003851},"USDC":{"BTC":0.00003852},"ROSE":{"BTC":0.00000155},"LUNA":{"BTC":0.00001524},"LUNC":{"BTC":2e-9}}
+{"ZAR":499977}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693810800,
+  "base": "USD",
+  "rates": {
+    "THB": 35.175,
+    "ZAR": 18.802501
+  }
+}
+=======================================================================================
+Tue Sep  5 09:00:00 SAST 2023
+{"BTC":{"USD":25678.17},"ETH":{"USD":1621.01},"LTC":{"USD":62.99},"DASH":{"USD":25.47},"DOGE":{"USD":0.06389},"BTG":{"USD":12.28},"SC":{"USD":0.002752},"BCH":{"USD":191.28},"OMG":{"USD":0.456},"CVC":{"USD":0.0685},"DCR":{"USD":13.02},"XVG":{"USD":0.003275},"XMR":{"USD":139.45},"ADA":{"USD":0.2563},"USDT":{"USD":0.9995},"USDC":{"USD":1},"ROSE":{"USD":0.03976}}
+{"ADA":{"BTC":0.00000997},"DOGE":{"BTC":0.00000249},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.005431},"LTC":{"BTC":0.002453},"XLM":{"BTC":0.00000489},"BNB":{"BTC":0.008357},"DASH":{"BTC":0.000992},"ETH":{"BTC":0.06314},"USDT":{"BTC":0.00003892},"USDC":{"BTC":0.00003894},"ROSE":{"BTC":0.00000155},"LUNA":{"BTC":0.0000159},"LUNC":{"BTC":2e-9}}
+{"ZAR":504882}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693897200,
+  "base": "USD",
+  "rates": {
+    "THB": 35.4151,
+    "ZAR": 19.174498
+  }
+}
+=======================================================================================
+Wed Sep  6 09:00:00 SAST 2023
+{"BTC":{"USD":25762.48},"ETH":{"USD":1629.62},"LTC":{"USD":62.78},"DASH":{"USD":25.45},"DOGE":{"USD":0.06389},"BTG":{"USD":12.3},"SC":{"USD":0.00276},"BCH":{"USD":191.94},"OMG":{"USD":0.4648},"CVC":{"USD":0.0691},"DCR":{"USD":12.98},"XVG":{"USD":0.003283},"XMR":{"USD":138.62},"ADA":{"USD":0.2559},"USDT":{"USD":0.9994},"USDC":{"USD":1},"ROSE":{"USD":0.04019}}
+{"ADA":{"BTC":0.00000993},"DOGE":{"BTC":0.00000248},"SHIB":{"BTC":3e-10},"XMR":{"BTC":0.00538},"LTC":{"BTC":0.002437},"XLM":{"BTC":0.00000469},"BNB":{"BTC":0.008313},"DASH":{"BTC":0.000988},"ETH":{"BTC":0.06326},"USDT":{"BTC":0.00003879},"USDC":{"BTC":0.00003882},"ROSE":{"BTC":0.00000156},"LUNA":{"BTC":0.00001597},"LUNC":{"BTC":2e-9}}
+{"ZAR":505470}
+{
+  "disclaimer": "Usage subject to terms: https://openexchangerates.org/terms",
+  "license": "https://openexchangerates.org/license",
+  "timestamp": 1693983600,
+  "base": "USD",
+  "rates": {
+    "THB": 35.4955,
+    "ZAR": 19.200455
+  }
+}
