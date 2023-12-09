@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "#bitcoin #btc in #SouthAfrica"
+# VALR
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/BTCZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
 VALR_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
@@ -8,27 +9,7 @@ CURL_OUT=$(curl $CURL_QRY)
 VALR_ADA_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
 echo "<=== VALR - @VALRdotcom ===>"
 echo $VALR_PRICE
-CURL_QRY="-s https://api.binance.com/api/v3/ticker/price?symbol=BTCZAR"
-CURL_OUT=$(curl $CURL_QRY)
-BINANCE_PRICE=$(echo $CURL_OUT | jq '.price | tonumber')
-echo "<=== BINANCE - @BinanceAfrica ===>"
-echo $BINANCE_PRICE
-CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
-CURL_OUT=$(curl $CURL_QRY)
-CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
-echo "<=== Chainex - @ChainEXIO ==>"
-echo $CHAIN_PRICE
-CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
-CURL_OUT=$(curl $CURL_QRY)
-ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
-echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
-echo $ALTCOIN_PRICE
-# CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&side=buy&to_amount=1"
-CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&from_amount=1000&side=buy&prefunded=1"
-CURL_OUT=$(curl $CURL_QRY)
-OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
-echo "<=== OVEX - @OVEXio ==>"
-echo $OVEX_PRICE
+# Luno
 CURL_QRY="-s https://api.mybitx.com/api/1/ticker?pair=XBTZAR"
 CURL_OUT=$(curl $CURL_QRY)
 LUNO_PRICE=$(echo $CURL_OUT | jq '.last_trade | tonumber')
@@ -38,11 +19,43 @@ LUNO_ADA_PRICE=$(echo $CURL_OUT | jq '.last_trade | tonumber')
 LUNO_PRICE=${LUNO_PRICE:-0}
 echo "<=== LUNO - @LunoGlobal ===>" 
 echo $LUNO_PRICE
+# Cape Crypto
+CURL_QRY="-s https://trade.capecrypto.com/api/v2/trade/public/markets/btczar/tickers"
+CURL_OUT=$(curl $CURL_QRY)
+CAPECRYPTO_PRICE=$(echo $CURL_OUT | jq '.ticker.last | tonumber')
+echo "<=== Cape Crypto - @capecryptoSA ===>"
+echo $CAPECRYPTO_PRICE
+# Binance Africa
+CURL_QRY="-s https://api.binance.com/api/v3/ticker/price?symbol=BTCZAR"
+CURL_OUT=$(curl $CURL_QRY)
+BINANCE_PRICE=$(echo $CURL_OUT | jq '.price | tonumber')
+echo "<=== BINANCE - @BinanceAfrica ===>"
+echo $BINANCE_PRICE
+# Chainex
+CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
+CURL_OUT=$(curl $CURL_QRY)
+CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
+echo "<=== Chainex - @ChainEXIO ==>"
+echo $CHAIN_PRICE
+# AltCoinTraded
+CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
+CURL_OUT=$(curl $CURL_QRY)
+ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
+echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
+echo $ALTCOIN_PRICE
+# OVEX
+# CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&side=buy&to_amount=1"
+CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&from_amount=1000&side=buy&prefunded=1"
+CURL_OUT=$(curl $CURL_QRY)
+OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
+echo "<=== OVEX - @OVEXio ==>"
+echo $OVEX_PRICE
 
-TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE | bc)
+
+TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE | bc)
 
-AVERAGE_ZAR=$(echo $TOTAL_ZAR/6 | bc)
+AVERAGE_ZAR=$(echo $TOTAL_ZAR/7 | bc)
 SATS_ZAR=$(echo 100000000/$AVERAGE_ZAR | bc)
 echo "<=== sats per R1.00 ==>"
 echo $TOTAL_ZAR
