@@ -31,18 +31,18 @@ CURL_OUT=$(curl $CURL_QRY)
 BINANCE_PRICE=$(echo $CURL_OUT | jq '.price | tonumber')
 echo "<=== BINANCE - @BinanceAfrica ===>"
 echo $BINANCE_PRICE
-# Chainex
-CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
-CURL_OUT=$(curl $CURL_QRY)
-CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
-echo "<=== Chainex - @ChainEXIO ==>"
-echo $CHAIN_PRICE
 # AltCoinTraded
 CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
 CURL_OUT=$(curl $CURL_QRY)
 ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
 echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
 echo $ALTCOIN_PRICE
+# Chainex
+CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
+CURL_OUT=$(curl $CURL_QRY)
+CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
+echo "<=== Chainex - @ChainEXIO ==>"
+echo $CHAIN_PRICE
 # OVEX
 # CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&side=buy&to_amount=1"
 CURL_QRY="-s --location --request GET https://www.ovex.io/api/v2/rfq/get_quote?market=btczar&from_amount=1000&side=buy&prefunded=1"
