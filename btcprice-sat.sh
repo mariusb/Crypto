@@ -91,5 +91,17 @@ CALC_ZAR100=$(echo $CALC_PREM_ZAR*100 | bc)
 CALC_PREM=$(echo $CALC_ZAR100/$CALC_ZAR | bc -l)
 echo $CALC_PREM
 
+echo "<== Fees ==>"
+echo "<=== mempool.space - @mempool ===>"
+CURL_QRY="curl -s https://mempool.space/api/v1/fees/recommended"
+CURL_OUT=$(curl $CURL_QRY)
+MP_FASTFEE=$(echo $CURL_OUT | jq '.fastestFee | tonumber')
+echo $MP_FASTFEE
+echo "<=== Cape Crypto - @capecryptoSA ===>"
+CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/trade/public/currencies/btc"
+CURL_OUT=$(curl $CURL_QRY)
+CC_WITHFEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
+echo $CC_WITHFEE
+
 echo $(date)
 #echo "https://tippin.me/@mariusb"
