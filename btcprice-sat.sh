@@ -100,8 +100,10 @@ echo $MP_FASTFEE
 echo "<=== Cape Crypto - @capecryptoSA ===>"
 CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/trade/public/currencies/btc"
 CURL_OUT=$(curl $CURL_QRY)
-CC_WITHFEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
-echo $CC_WITHFEE
+CC_WITHL1FEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
+echo $CC_WITHL1FEE
+CC_WITHL2FEE=$(echo $CURL_OUT | jq '.layer_two_withdraw_fee | tonumber')
+echo $CC_WITHL2FEE
 
 echo $(date)
 #echo "https://tippin.me/@mariusb"
