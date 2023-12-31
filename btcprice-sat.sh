@@ -1,5 +1,18 @@
 #!/bin/bash
+echo "<=== Tweet 1 ===>"
 echo "#bitcoin #btc in #SouthAfrica"
+echo ""
+# Blocks and Supply 
+CURL_QRY="-s https://bitcoinexplorer.org/api/blocks/tip"
+CURL_OUT=$(curl $CURL_QRY)
+BLOCKS=$(echo $CURL_OUT | jq '.height | tonumber')
+printf -v BLOCKSSTR "Blocks: %d\n" "$BLOCKS"
+echo $BLOCKSSTR
+CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
+CURL_OUT=$(curl $CURL_QRY)
+SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
+printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
+echo $SUPPLYSTR
 # VALR
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/BTCZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
@@ -62,27 +75,30 @@ echo $TOTAL_ZAR
 echo $AVERAGE_ZAR
 echo $SATS_ZAR
 
-CURL_QRY="-s https://api.coindesk.com/v1/bpi/currentprice/ZAR.json"
-CURL_OUT=$(curl $CURL_QRY)
-echo "<== Coindesk (USD/ZAR) - @Coindesk ==>"
-CD_USD=$(echo $CURL_OUT | jq '.bpi.USD.rate_float | tonumber')
-echo $CD_USD
-CURL_QRY="-s https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR"
-CURL_OUT=$(curl $CURL_QRY)
-USDZAR_RATE=$(echo $CURL_OUT | jq '.rates.ZAR | tonumber')
-CALC_ZAR=$(echo $CD_USD*$USDZAR_RATE | bc)
-echo $USDZAR_RATE
-echo $CALC_ZAR
-CALC_PREM_ZAR=$(echo $AVERAGE_ZAR-$CALC_ZAR | bc)
-CALC_ZAR100=$(echo $CALC_PREM_ZAR*100 | bc)
-CALC_PREM=$(echo $CALC_ZAR100/$CALC_ZAR | bc -l)
-echo $CALC_PREM
+# CURL_QRY="-s https://api.coindesk.com/v1/bpi/currentprice/ZAR.json"
+# CURL_OUT=$(curl $CURL_QRY)
+# echo "<== Coindesk (USD/ZAR) - @Coindesk ==>"
+# CD_USD=$(echo $CURL_OUT | jq '.bpi.USD.rate_float | tonumber')
+# echo $CD_USD
+# CURL_QRY="-s https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR"
+# CURL_OUT=$(curl $CURL_QRY)
+# USDZAR_RATE=$(echo $CURL_OUT | jq '.rates.ZAR | tonumber')
+# CALC_ZAR=$(echo $CD_USD*$USDZAR_RATE | bc)
+# echo $USDZAR_RATE
+# echo $CALC_ZAR
+# CALC_PREM_ZAR=$(echo $AVERAGE_ZAR-$CALC_ZAR | bc)
+# CALC_ZAR100=$(echo $CALC_PREM_ZAR*100 | bc)
+# CALC_PREM=$(echo $CALC_ZAR100/$CALC_ZAR | bc -l)
+# echo $CALC_PREM
 
 CURL_QRY="curl -s https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
 CURL_OUT=$(curl $CURL_QRY)
 echo "<== CoinGecho (USD/ZAR) - @CoinGecho ==>"
 CG_USD=$(echo $CURL_OUT | jq '.bitcoin.usd | tonumber')
 echo $CG_USD
+CURL_QRY="-s https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR"
+CURL_OUT=$(curl $CURL_QRY)
+USDZAR_RATE=$(echo $CURL_OUT | jq '.rates.ZAR | tonumber')
 CALC_ZAR=$(echo $CG_USD*$USDZAR_RATE | bc)
 echo $USDZAR_RATE
 echo $CALC_ZAR
@@ -91,23 +107,22 @@ CALC_ZAR100=$(echo $CALC_PREM_ZAR*100 | bc)
 CALC_PREM=$(echo $CALC_ZAR100/$CALC_ZAR | bc -l)
 echo $CALC_PREM
 
-echo "<== Fees ==>"
-echo "<=== mempool.space - @mempool ===>"
+echo "Fees:"
 CURL_QRY="curl -s https://mempool.space/api/v1/fees/recommended"
 CURL_OUT=$(curl $CURL_QRY)
 MP_FASTFEE=$(echo $CURL_OUT | jq '.fastestFee | tonumber')
-echo $MP_FASTFEE
-echo "<=== Cape Crypto - @capecryptoSA ===>"
+printf -v MP_FASTFEESTR "%d sats/vbyte @mempool (onchain)" "$MP_FASTFEE"
+echo $MP_FASTFEESTR
 CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/trade/public/currencies/btc"
 CURL_OUT=$(curl $CURL_QRY)
 CC_WITHL1FEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
 CC_WITHL1FEEZAR=$(echo $CC_WITHL1FEE*$CAPECRYPTO_PRICE | bc -l)
-echo $CC_WITHL1FEE
-echo $CC_WITHL1FEEZAR
+printf -v CC_WITHL1STR "%.6fBTC (R%.2f) @capecryptoSA (onchain)\n" "$CC_WITHL1FEE" "$CC_WITHL1FEEZAR"
+echo $CC_WITHL1STR
 CC_WITHL2FEE=$(echo $CURL_OUT | jq '.layer_two_withdraw_fee | tonumber')
 CC_WITHL2FEEZAR=$(echo $CC_WITHL2FEE/100000000*$CAPECRYPTO_PRICE | bc -l)
-echo $CC_WITHL2FEE
-echo $CC_WITHL2FEEZAR
+printf -v CC_WITHL2STR "%d sats (R%.2f) @capecryptoSA (layer 2 - LN)\n\n" "$CC_WITHL2FEE" "$CC_WITHL2FEEZAR"
+echo $CC_WITHL2STR
 
-echo $(date)
+echo $(date '+%Y-%m-%d %H:%M')
 #echo "https://tippin.me/@mariusb"
