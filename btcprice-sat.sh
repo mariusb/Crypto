@@ -140,5 +140,5 @@ CC_WITHL2FEEZAR=$(echo $CC_WITHL2FEE/100000000*$CAPECRYPTO_PRICE | bc -l)
 printf -v CC_WITHL2STR "%d sats (R%.2f) @capecryptoSA (layer 2 - LN)\n\n" "$CC_WITHL2FEE" "$CC_WITHL2FEEZAR"
 echo $CC_WITHL2STR
 
-echo $(date '+%Y-%m-%d %H:%M')
+echo $(date '+%Y-%m-%d %H:%M %Z')
 #echo "https://tippin.me/@mariusb"
