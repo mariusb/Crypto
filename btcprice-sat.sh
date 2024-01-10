@@ -3,9 +3,14 @@ echo "<=== Tweet 1 ===>"
 echo "#bitcoin #btc in #SouthAfrica"
 echo ""
 # Blocks and Supply 
-CURL_QRY="-s https://bitcoinexplorer.org/api/blocks/tip"
+# BTC RPC Explorer
+# CURL_QRY="-s https://bitcoinexplorer.org/api/blocks/tip"
+# CURL_OUT=$(curl $CURL_QRY)
+# BLOCKS=$(echo $CURL_OUT | jq '.height | tonumber')
+# Mempool.space
+CURL_QRY="-s https://mempool.space/api/blocks/tip/height"
 CURL_OUT=$(curl $CURL_QRY)
-BLOCKS=$(echo $CURL_OUT | jq '.height | tonumber')
+BLOCKS=$(echo $CURL_OUT | jq '. | tonumber')
 printf -v BLOCKSSTR "Blocks: %d\n" "$BLOCKS"
 echo $BLOCKSSTR
 CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
