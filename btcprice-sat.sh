@@ -138,7 +138,7 @@ CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/trade/public/currencies/bt
 CURL_OUT=$(curl $CURL_QRY)
 CC_WITHL1FEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
 CC_WITHL1FEEZAR=$(echo $CC_WITHL1FEE*$CAPECRYPTO_PRICE | bc -l)
-printf -v CC_WITHL1STR "%.6fBTC (R%.2f) @capecryptoSA (onchain)\n" "$CC_WITHL1FEE" "$CC_WITHL1FEEZAR"
+printf -v CC_WITHL1STR "%.8fBTC (R%.2f) @capecryptoSA (onchain)\n" "$CC_WITHL1FEE" "$CC_WITHL1FEEZAR"
 echo $CC_WITHL1STR
 CC_WITHL2FEE=$(echo $CURL_OUT | jq '.layer_two_withdraw_fee | tonumber')
 CC_WITHL2FEEZAR=$(echo $CC_WITHL2FEE/100000000*$CAPECRYPTO_PRICE | bc -l)
