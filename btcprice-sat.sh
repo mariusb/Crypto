@@ -147,3 +147,6 @@ echo $CC_WITHL2STR
 echo "Tip over LN to: mariusb@blink.sv"
 echo $(date '+%Y-%m-%d %H:%M %Z')
 #echo "https://tippin.me/@mariusb"
+echo "<=== Additional Information ==>"
+printf -v USDZARSTR "R%.5f per USD\n" "$USDZAR_RATE"
+echo $USDZARSTR
