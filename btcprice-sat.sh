@@ -23,9 +23,9 @@ echo ""
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/BTCZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
 VALR_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
-CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/ADABTC/marketsummary"
-CURL_OUT=$(curl $CURL_QRY)
-VALR_ADA_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
+# CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/ADABTC/marketsummary"
+# CURL_OUT=$(curl $CURL_QRY)
+# VALR_ADA_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
 # echo "<=== VALR - @VALRdotcom ===>"
 # echo $VALR_PRICE
 # Luno
