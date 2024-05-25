@@ -91,6 +91,7 @@ printf -v ALTCOIN_PRICESTR "R%.2f @AltCoinTraderSA\n" "$ALTCOIN_PRICE"
 echo $ALTCOIN_PRICESTR
 printf -v CHAIN_PRICESTR "R%.2f @ChainEXIO\n" "$CHAIN_PRICE"
 echo $CHAIN_PRICESTR
+echo "1/2"
 echo "<=== Tweet 2 ===>"
 printf -v OVEX_PRICESTR "R%.2f @OVEXIO\n" "$OVEX_PRICE"
 echo $OVEX_PRICESTR
@@ -146,6 +147,7 @@ printf -v CC_WITHL2STR "%d sats (R%.2f) @capecryptoSA (layer 2 - LN)\n\n" "$CC_W
 echo $CC_WITHL2STR
 echo "Tip over LN to: mariusb@blink.sv"
 echo $(date '+%Y-%m-%d %H:%M %Z')
+echo "2/2"
 #echo "https://tippin.me/@mariusb"
 echo "<=== Additional Information ==>"
 printf -v USDZARSTR "R%.5f per USD\n" "$USDZAR_RATE"
