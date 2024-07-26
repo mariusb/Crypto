@@ -19,7 +19,7 @@ CURL_OUT=$(curl $CURL_QRY)
 # SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
 SUPPLY=$(echo $CURL_OUT | jq '.market_data.circulating_supply | tonumber')
 # printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
-printf -v SUPPLYSTR "Supply: %d\n" "$SUPPLY"
+printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
 echo $SUPPLYSTR
 echo ""
 # VALR
