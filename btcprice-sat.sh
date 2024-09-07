@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_NUMERIC="en_US.UTF-8"
 echo "<=== Tweet 1 ===>"
 echo "#bitcoin #btc in #SouthAfrica"
 echo ""
@@ -13,12 +14,11 @@ CURL_OUT=$(curl $CURL_QRY)
 BLOCKS=$(echo $CURL_OUT | jq '. | tonumber')
 printf -v BLOCKSSTR "Blocks: %d\n" "$BLOCKS"
 echo $BLOCKSSTR
-# CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
-CURL_QRY="-s --request GET --url https://api.coingecko.com/api/v3/coins/bitcoin --header 'accept: application/json' --header 'x-cg-demo-api-key: CG-ct1DQcgxdyp2tqKUC1S4CE16'"
+CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
+# CURL_QRY="-s --request GET --url https://api.coingecko.com/api/v3/coins/bitcoin --header 'accept: application/json' --header 'x-cg-demo-api-key: CG-ct1DQcgxdyp2tqKUC1S4CE16'"
 CURL_OUT=$(curl $CURL_QRY)
-# SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
-SUPPLY=$(echo $CURL_OUT | jq '.market_data.circulating_supply | tonumber')
-# printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
+SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
+# SUPPLY=$(echo $CURL_OUT | jq '.market_data.circulating_supply | tonumber')
 printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
 echo $SUPPLYSTR
 echo ""
