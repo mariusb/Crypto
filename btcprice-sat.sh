@@ -1,4 +1,34 @@
 #!/bin/bash
+
+# Check if an argument is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 [B|C|H]"
+    exit 1
+fi
+
+case $1 in
+    B)
+        SUPHOST=$1
+        ;;
+    C)
+        SUPHOST=$1
+        ;;
+    H)
+        echo "Usage: $0 [B|C|H]"
+        echo ""
+        echo "Options:"
+        echo "  B     Get supply from bitcoinenplorer.org"
+        echo "  C     Get supply from coingecho.com"
+        echo "  H     Show this help message."
+        exit 1
+        ;;
+    *)
+        echo "Invalid option: $1"
+        echo "Use 'H' to see available options."
+        exit 1
+        ;;
+esac
+
 export LC_NUMERIC="en_US.UTF-8"
 echo "<=== Tweet 1 ===>"
 echo "#bitcoin #btc in #SouthAfrica"
@@ -14,11 +44,16 @@ CURL_OUT=$(curl $CURL_QRY)
 BLOCKS=$(echo $CURL_OUT | jq '. | tonumber')
 printf -v BLOCKSSTR "Blocks: %d\n" "$BLOCKS"
 echo $BLOCKSSTR
-# CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
-CURL_QRY="-s --request GET --url https://api.coingecko.com/api/v3/coins/bitcoin --header 'accept: application/json' --header 'x-cg-demo-api-key: CG-ct1DQcgxdyp2tqKUC1S4CE16'"
-CURL_OUT=$(curl $CURL_QRY)
-# SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
-SUPPLY=$(echo $CURL_OUT | jq '.market_data.circulating_supply | tonumber')
+if [ "$SUPHOST" = "B" ]; then
+    CURL_QRY="-s https://bitcoinexplorer.org/api/blockchain/coins"
+    CURL_OUT=$(curl $CURL_QRY)
+    SUPPLY=$(echo $CURL_OUT | jq '.supply | tonumber')
+fi
+if [ "$SUPHOST" = "C" ]; then
+    CURL_QRY="-s --request GET --url https://api.coingecko.com/api/v3/coins/bitcoin --header 'accept: application/json' --header 'x-cg-demo-api-key: CG-ct1DQcgxdyp2tqKUC1S4CE16'"
+    CURL_OUT=$(curl $CURL_QRY)
+    SUPPLY=$(echo $CURL_OUT | jq '.market_data.circulating_supply | tonumber')
+fi
 printf -v SUPPLYSTR "Supply: %.8f\n" "$SUPPLY"
 echo $SUPPLYSTR
 echo ""
