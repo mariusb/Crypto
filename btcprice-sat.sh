@@ -95,9 +95,9 @@ ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
 # echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
 # echo $ALTCOIN_PRICE
 # Chainex
-CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
-CURL_OUT=$(curl $CURL_QRY)
-CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
+# CURL_QRY="-s https://api.chainex.io/market/stats/BTC/ZAR"
+# CURL_OUT=$(curl $CURL_QRY)
+# CHAIN_PRICE=$(echo $CURL_OUT | jq '.data.last_price | tonumber')
 # echo "<=== Chainex - @ChainEXIO ==>"
 # echo $CHAIN_PRICE
 # OVEX
@@ -109,10 +109,11 @@ OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
 # echo $OVEX_PRICE
 
 
-TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE | bc)
 
-AVERAGE_ZAR=$(echo $TOTAL_ZAR/7 | bc)
+AVERAGE_ZAR=$(echo $TOTAL_ZAR/6 | bc)
 SATS_ZAR=$(echo 100000000/$AVERAGE_ZAR | bc)
 # Exchange formattinf and output
 printf -v SATS_ZARSTR "%d sats\\R1\n" "$SATS_ZAR"
@@ -127,12 +128,13 @@ printf -v BINANCE_PRICESTR "R%.2f @BinanceAfrica\n" "$BINANCE_PRICE"
 echo $BINANCE_PRICESTR
 printf -v ALTCOIN_PRICESTR "R%.2f @AltCoinTraderSA\n" "$ALTCOIN_PRICE"
 echo $ALTCOIN_PRICESTR
-printf -v CHAIN_PRICESTR "R%.2f @ChainEXIO\n" "$CHAIN_PRICE"
-echo $CHAIN_PRICESTR
-echo "1/2"
-echo "<=== Tweet 2 ===>"
+# printf -v CHAIN_PRICESTR "R%.2f @ChainEXIO\n" "$CHAIN_PRICE"
+# echo $CHAIN_PRICESTR
 printf -v OVEX_PRICESTR "R%.2f @OVEXIO\n" "$OVEX_PRICE"
 echo $OVEX_PRICESTR
+
+echo "1/2"
+echo "<=== Tweet 2 ===>"
 
 # CURL_QRY="-s https://api.coindesk.com/v1/bpi/currentprice/ZAR.json"
 # CURL_OUT=$(curl $CURL_QRY)
