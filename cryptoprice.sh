@@ -9,4 +9,9 @@ curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=ZAR&e=VALR'
 echo "" >> cryptoprice.data
 curl -s 'https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR,THB' >> cryptoprice.data
 echo "" >> cryptoprice.data
+CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/USDTZAR/marketsummary"
+CURL_OUT=$(curl $CURL_QRY)
+VALR_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
+echo "<=== VALR - @VALRdotcom - USDT ===>" >> cryptoprice.data
+echo $VALR_PRICE >> cryptoprice.data
 exit 0
