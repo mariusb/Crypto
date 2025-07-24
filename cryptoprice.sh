@@ -1,4 +1,16 @@
 #!/bin/bash
+
+# Backup cryptoprice.data file at the first run in a new month (if not already backed up this session)
+BACKUP_DATE=$(date +"%Y%m")
+BACKUP_FILE="cryptoprice.data.$BACKUP_DATE"
+
+if [ ! -f "$BACKUP_FILE" ]; then
+    if [ -f cryptoprice.data ]; then
+        mv cryptoprice.data "$BACKUP_FILE"
+        echo "Backup created: $BACKUP_FILE" >> cryptoprice.data 2>&1
+    fi
+fi
+
 echo "=======================================================================================" >> cryptoprice.data
 date >> cryptoprice.data
 curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,DOGE,BTG,TRX,SC,BCH,OMG,CVC,DCR,XVG,XMR,ADA,USDT,USDC,ROSE&tsyms=USD' >> cryptoprice.data 
