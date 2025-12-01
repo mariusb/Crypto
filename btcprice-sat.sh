@@ -77,7 +77,7 @@ LUNO_PRICE=${LUNO_PRICE:-0}
 # echo "<=== LUNO - @LunoGlobal ===>" 
 # echo $LUNO_PRICE
 # Cape Crypto
-CURL_QRY="-s https://trade.capecrypto.com/api/v2/trade/public/markets/btczar/tickers"
+CURL_QRY="-s https://trade.capecrypto.com/api/v2/atlas/public/markets/btczar/tickers"
 CURL_OUT=$(curl $CURL_QRY)
 CAPECRYPTO_PRICE=$(echo $CURL_OUT | jq '.ticker.last | tonumber')
 # echo "<=== Cape Crypto - @capecryptoSA ===>"
@@ -175,13 +175,14 @@ CURL_OUT=$(curl $CURL_QRY)
 MP_FASTFEE=$(echo $CURL_OUT | jq '.fastestFee | tonumber')
 printf -v MP_FASTFEESTR "%d sats/vbyte @mempool (onchain)" "$MP_FASTFEE"
 echo $MP_FASTFEESTR
-CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/trade/public/currencies/btc"
+CURL_QRY="curl -s https://trade.capecrypto.com/api/v2/atlas/public/currencies/btc"
 CURL_OUT=$(curl $CURL_QRY)
 CC_WITHL1FEE=$(echo $CURL_OUT | jq '.withdraw_fee | tonumber')
 CC_WITHL1FEEZAR=$(echo $CC_WITHL1FEE*$CAPECRYPTO_PRICE | bc -l)
 printf -v CC_WITHL1STR "%.8fBTC (R%.2f) @capecryptoSA (onchain)\n" "$CC_WITHL1FEE" "$CC_WITHL1FEEZAR"
 echo $CC_WITHL1STR
-CC_WITHL2FEE=$(echo $CURL_OUT | jq '.layer_two_withdraw_fee | tonumber')
+# CC_WITHL2FEE=$(echo $CURL_OUT | jq '.layer_two_withdraw_fee | tonumber')
+CC_WITHL2FEE=250
 CC_WITHL2FEEZAR=$(echo $CC_WITHL2FEE/100000000*$CAPECRYPTO_PRICE | bc -l)
 printf -v CC_WITHL2STR "%d sats (R%.2f) @capecryptoSA (layer 2 - LN)\n\n" "$CC_WITHL2FEE" "$CC_WITHL2FEEZAR"
 echo $CC_WITHL2STR
