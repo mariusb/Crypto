@@ -3,12 +3,18 @@ echo "#BTC - VALR in #SouthAfrica"
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/BTCZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
 VALR_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
-echo $VALR_PRICE
+CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/BTCUSDT/marketsummary"
+CURL_OUT=$(curl $CURL_QRY)
+VALR_PRICE_USDT=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
+echo $VALR_PRICE_USDT " / " $VALR_PRICE
 echo "#ETH - VALR in #SouthAfrica"
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/ETHZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
 VALR_PRICE=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
-echo $VALR_PRICE
+CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/ETHUSDT/marketsummary"
+CURL_OUT=$(curl $CURL_QRY)
+VALR_PRICE_USDT=$(echo $CURL_OUT | jq '.lastTradedPrice | tonumber')
+echo $VALR_PRICE_USDT " / " $VALR_PRICE
 echo "#USDT - VALR in #SouthAfrica"
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/USDTZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
