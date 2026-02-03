@@ -125,8 +125,8 @@ printf -v LUNO_PRICESTR "R%.2f @LunoGlobal\n" "$LUNO_PRICE"
 echo $LUNO_PRICESTR
 printf -v CAPECRYPTO_PRICESTR "R%.2f @capecryptoSA\n" "$CAPECRYPTO_PRICE"
 echo $CAPECRYPTO_PRICESTR
-printf -v BINANCE_PRICESTR "R%.2f @BinanceAfrica\n" "$BINANCE_PRICE"
-echo $BINANCE_PRICESTR
+# printf -v BINANCE_PRICESTR "R%.2f @BinanceAfrica\n" "$BINANCE_PRICE"
+# echo $BINANCE_PRICESTR
 printf -v ALTCOIN_PRICESTR "R%.2f @AltCoinTraderSA\n" "$ALTCOIN_PRICE"
 echo $ALTCOIN_PRICESTR
 # printf -v CHAIN_PRICESTR "R%.2f @ChainEXIO\n" "$CHAIN_PRICE"
