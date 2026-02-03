@@ -83,9 +83,9 @@ CAPECRYPTO_PRICE=$(echo $CURL_OUT | jq '.ticker.last | tonumber')
 # echo "<=== Cape Crypto - @capecryptoSA ===>"
 # echo $CAPECRYPTO_PRICE
 # Binance Africa
-CURL_QRY="-s https://api.binance.com/api/v3/ticker/price?symbol=BTCZAR"
-CURL_OUT=$(curl $CURL_QRY)
-BINANCE_PRICE=$(echo $CURL_OUT | jq '.price | tonumber')
+# CURL_QRY="-s https://api.binance.com/api/v3/ticker/price?symbol=BTCZAR"
+# CURL_OUT=$(curl $CURL_QRY)
+# BINANCE_PRICE=$(echo $CURL_OUT | jq '.price | tonumber')
 # echo "<=== BINANCE - @BinanceAfrica ===>"
 # echo $BINANCE_PRICE
 # AltCoinTraded
@@ -110,10 +110,11 @@ OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
 
 
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
-TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
-# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE | bc)
+# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+# Remove Binance from average
+TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 
-AVERAGE_ZAR=$(echo $TOTAL_ZAR/6 | bc)
+AVERAGE_ZAR=$(echo $TOTAL_ZAR/5 | bc)
 SATS_ZAR=$(echo 100000000/$AVERAGE_ZAR | bc)
 # Exchange formattinf and output
 printf -v SATS_ZARSTR "%d sats\\R1\n" "$SATS_ZAR"
