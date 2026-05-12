@@ -33,7 +33,7 @@ export LC_NUMERIC="en_US.UTF-8"
 echo "<=== Tweet 1 ===>"
 echo "#bitcoin #btc in #SouthAfrica"
 echo ""
-# Blocks and Supply 
+# Blocks and Supply
 # BTC RPC Explorer
 # CURL_QRY="-s https://bitcoinexplorer.org/api/blocks/tip"
 # CURL_OUT=$(curl $CURL_QRY)
@@ -74,7 +74,7 @@ CURL_QRY="-s https://api.mybitx.com/api/1/ticker?pair=ADAZAR"
 CURL_OUT=$(curl $CURL_QRY)
 LUNO_ADA_PRICE=$(echo $CURL_OUT | jq '.last_trade | tonumber')
 LUNO_PRICE=${LUNO_PRICE:-0}
-# echo "<=== LUNO - @LunoGlobal ===>" 
+# echo "<=== LUNO - @LunoGlobal ===>"
 # echo $LUNO_PRICE
 # Cape Crypto
 CURL_QRY="-s https://trade.capecrypto.com/api/v2/atlas/public/markets/btczar/tickers"
@@ -89,9 +89,9 @@ CAPECRYPTO_PRICE=$(echo $CURL_OUT | jq '.ticker.last | tonumber')
 # echo "<=== BINANCE - @BinanceAfrica ===>"
 # echo $BINANCE_PRICE
 # AltCoinTraded
-CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
-CURL_OUT=$(curl $CURL_QRY)
-ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
+# CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
+# CURL_OUT=$(curl $CURL_QRY)
+# ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
 # echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
 # echo $ALTCOIN_PRICE
 # Chainex
@@ -112,9 +112,11 @@ OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # Remove Binance from average
-TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+# Remove AltCoinTrader from average
+TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 
-AVERAGE_ZAR=$(echo $TOTAL_ZAR/5 | bc)
+AVERAGE_ZAR=$(echo $TOTAL_ZAR/4 | bc)
 SATS_ZAR=$(echo 100000000/$AVERAGE_ZAR | bc)
 # Exchange formattinf and output
 printf -v SATS_ZARSTR "%d sats\\R1\n" "$SATS_ZAR"
@@ -158,7 +160,7 @@ CURL_OUT=$(curl $CURL_QRY)
 # "<== CoinGecho (USD/ZAR) - @CoinGecho ==>"
 echo "Ref:"
 CG_USD=$(echo $CURL_OUT | jq '.bitcoin.usd | tonumber')
-printf -v CG_USDSTR "$%.2f @coingecko\n" "$CG_USD" 
+printf -v CG_USDSTR "$%.2f @coingecko\n" "$CG_USD"
 echo $CG_USDSTR
 CURL_QRY="-s https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR"
 CURL_OUT=$(curl $CURL_QRY)
