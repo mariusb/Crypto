@@ -89,9 +89,9 @@ CAPECRYPTO_PRICE=$(echo $CURL_OUT | jq '.ticker.last | tonumber')
 # echo "<=== BINANCE - @BinanceAfrica ===>"
 # echo $BINANCE_PRICE
 # AltCoinTraded
-# CURL_QRY="-s https://api.altcointrader.co.za/v3/live-stats"
-# CURL_OUT=$(curl $CURL_QRY)
-# ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.BTC.Price | tonumber')
+CURL_QRY="-s https://api.altcointrader.co.za/ticker/BTCZAR"
+CURL_OUT=$(curl $CURL_QRY)
+ALTCOIN_PRICE=$(echo $CURL_OUT | jq '.last | tonumber')
 # echo "<== AltCoinTrader - @AltCoinTraderSA ==>"
 # echo $ALTCOIN_PRICE
 # Chainex
@@ -112,11 +112,11 @@ OVEX_PRICE=$(echo $CURL_OUT | jq '.rate | tonumber')
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$CHAIN_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$BINANCE_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # Remove Binance from average
-# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$ALTCOIN_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 # Remove AltCoinTrader from average
-TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
+# TOTAL_ZAR=$(echo $VALR_PRICE+$LUNO_PRICE+$OVEX_PRICE+$CAPECRYPTO_PRICE | bc)
 
-AVERAGE_ZAR=$(echo $TOTAL_ZAR/4 | bc)
+AVERAGE_ZAR=$(echo $TOTAL_ZAR/5 | bc)
 SATS_ZAR=$(echo 100000000/$AVERAGE_ZAR | bc)
 # Exchange formattinf and output
 printf -v SATS_ZARSTR "%d sats\\R1\n" "$SATS_ZAR"
@@ -129,8 +129,8 @@ printf -v CAPECRYPTO_PRICESTR "R%.2f @capecryptoSA\n" "$CAPECRYPTO_PRICE"
 echo $CAPECRYPTO_PRICESTR
 # printf -v BINANCE_PRICESTR "R%.2f @BinanceAfrica\n" "$BINANCE_PRICE"
 # echo $BINANCE_PRICESTR
-# printf -v ALTCOIN_PRICESTR "R%.2f @AltCoinTraderSA\n" "$ALTCOIN_PRICE"
-# echo $ALTCOIN_PRICESTR
+printf -v ALTCOIN_PRICESTR "R%.2f @AltCoinTraderSA\n" "$ALTCOIN_PRICE"
+echo $ALTCOIN_PRICESTR
 # printf -v CHAIN_PRICESTR "R%.2f @ChainEXIO\n" "$CHAIN_PRICE"
 # echo $CHAIN_PRICESTR
 printf -v OVEX_PRICESTR "R%.2f @OVEXIO\n" "$OVEX_PRICE"
