@@ -13,13 +13,13 @@ fi
 
 echo "=======================================================================================" >> cryptoprice.data
 date >> cryptoprice.data
-curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,DOGE,BTG,TRX,SC,BCH,OMG,CVC,DCR,XVG,XMR,ADA,NIGHT,BDAG,USDT,USDC&tsyms=USD' >> cryptoprice.data
+curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DOGE,TRX,ADA,NIGHT,BDAG,USDT,USDC&tsyms=USD' >> cryptoprice.data
 echo "" >> cryptoprice.data
-curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,NIGHT,BDAG,TRX,DOGE,SHIB,XMR,LTC,XLM,BNB,DASH,ETH,USDT,USDC&tsyms=BTC' >> cryptoprice.data
+curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,NIGHT,BDAG,TRX,DOGE,BNB,ETH,USDT,USDC&tsyms=BTC' >> cryptoprice.data
 echo "" >> cryptoprice.data
 curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=ZAR&e=VALR' >> cryptoprice.data
 echo "" >> cryptoprice.data
-curl -s 'https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR,THB' >> cryptoprice.data
+curl -s 'https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR,THB,KZT' >> cryptoprice.data
 echo "" >> cryptoprice.data
 CURL_QRY="-s --location --request GET https://api.valr.com/v1/public/USDTZAR/marketsummary"
 CURL_OUT=$(curl $CURL_QRY)
