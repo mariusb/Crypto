@@ -28,5 +28,5 @@ echo "<=== VALR - @VALRdotcom - USDT ===>" >> cryptoprice.data
 echo $VALR_PRICE >> cryptoprice.data
 
 # Run Crypto_Price (pricing data output to ODS file)
-~/LocalDocuments/Development/Rust/crypto_price/target/release/crypto_price
+/Users/mariusbock/LocalDocuments/Development/Rust/crypto_price/target/release/crypto_price
 exit 0
