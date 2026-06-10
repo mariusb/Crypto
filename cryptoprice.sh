@@ -13,11 +13,11 @@ fi
 
 echo "=======================================================================================" >> cryptoprice.data
 date >> cryptoprice.data
-curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DOGE,TRX,ADA,NIGHT,BDAG,USDT,USDC&tsyms=USD' >> cryptoprice.data
+curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,DOGE,TRX,ADA,NIGHT,BDAG,USDT,USDC&tsyms=USD&api_key=e67a1a47e8ce26da50c001a735d12e81b8c6b570094ead5e8b57bccd6a0aeae7' >> cryptoprice.data
 echo "" >> cryptoprice.data
-curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,NIGHT,BDAG,TRX,DOGE,BNB,ETH,USDT,USDC&tsyms=BTC' >> cryptoprice.data
+curl -s 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=ADA,NIGHT,BDAG,TRX,DOGE,BNB,ETH,USDT,USDC&tsyms=BTC&api_key=e67a1a47e8ce26da50c001a735d12e81b8c6b570094ead5e8b57bccd6a0aeae7' >> cryptoprice.data
 echo "" >> cryptoprice.data
-curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=ZAR&e=VALR' >> cryptoprice.data
+curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=ZAR&e=VALR&api_key=e67a1a47e8ce26da50c001a735d12e81b8c6b570094ead5e8b57bccd6a0aeae7' >> cryptoprice.data
 echo "" >> cryptoprice.data
 curl -s 'https://openexchangerates.org/api/latest.json?app_id=3263b0c93523446299d17e2e6abdd748&symbols=ZAR,THB,KZT' >> cryptoprice.data
 echo "" >> cryptoprice.data
