@@ -1,3 +1,4 @@
 cryptoprice.data
 cryptoprice.data.*
 *.ods
+*.env
