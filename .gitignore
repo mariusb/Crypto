@@ -2,3 +2,5 @@ cryptoprice.data
 cryptoprice.data.*
 *.ods
 *.env
+*.log
+*.log.*
